@@ -47,7 +47,7 @@ func helloPost(rw http.ResponseWriter, req *http.Request, p httprouter.Params) {
 	json.NewDecoder(req.Body).Decode(&ReqParams)
 
 	ResParams := ResParameters{
-		Greeting: "Hello, " + ReqParams.Name,
+		Greeting: "Hello, " + ReqParams.Name + "!",
 	}
 
 	greeting, _ := json.Marshal(ResParams)
